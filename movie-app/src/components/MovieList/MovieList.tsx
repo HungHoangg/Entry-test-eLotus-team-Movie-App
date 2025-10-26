@@ -16,7 +16,6 @@ export const MovieList = (props: MovieListProps) => {
         {Array.from({ length: 12 }).map((_, i) => (
           <MovieCardSkeleton key={i} />
         ))}
-        <MovieCardSkeleton />
       </div>
     );
 
