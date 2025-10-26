@@ -71,3 +71,21 @@ export interface MovieDetail {
   vote_average: number;
   vote_count: number;
 }
+
+export interface Genre {
+  id: number;
+  name: string;
+}
+
+export interface GetGenresResponse {
+  genres: Genre[];
+}
+
+export interface Country {
+  iso_3166_1: string;     
+  english_name: string;   
+  native_name: string;    
+}
+
+export type CountryList = Country[];
+

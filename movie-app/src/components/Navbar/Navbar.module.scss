@@ -1,7 +1,6 @@
 .navbar {
   position: fixed;
   box-sizing: border-box;
-  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +13,7 @@
   font-family: "Inter", sans-serif;
   z-index: 999;
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
-  overflow-y: hidden;
+  overflow: visible;
 }
 
 .transparent {
@@ -277,10 +276,9 @@
   img {
     width: 24px;
     height: 24px;
-    filter: invert(1); 
+    filter: invert(1);
   }
 }
-
 
 @media (max-width: 992px) {
   .toggleBtn {

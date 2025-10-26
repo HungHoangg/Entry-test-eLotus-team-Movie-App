@@ -4,6 +4,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import menuIcon from "/src/assets/images/menu-icon.svg";
 import closeIcon from "/src/assets/images/x-icon.svg";
 import { NOW_PLAYING_PATH, TOP_RATED_ROUTER } from "../../utils/constant";
+import Menu from "../Menu/Menu";
+import { useGetGenres } from "../../hooks/useGetGenres";
+import { useGetCountries } from "../../hooks/useGetCountries";
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -11,6 +14,8 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const navigate = useNavigate();
+  const { genres } = useGetGenres();
+  const { countries } = useGetCountries();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,20 +100,14 @@ const Navbar: React.FC = () => {
           Top Rated
         </NavLink>
 
-        <div className={styles.dropdown}>
-          <a href="#">Movie genre</a>
-          <img src="/src/assets/images/chevron-down.svg" alt="down" />
-        </div>
-
-        <div className={styles.dropdown}>
-          <a href="#">Countries</a>
-          <img src="/src/assets/images/chevron-down.svg" alt="down" />
-        </div>
-
-        <div className={styles.dropdown}>
-          <a href="#">More</a>
-          <img src="/src/assets/images/chevron-down.svg" alt="down" />
-        </div>
+        <Menu
+          title="Genre"
+          items={(genres || [])?.map((item) => item?.name || "")}
+        />
+        <Menu
+          title="Countries"
+          items={(countries || [])?.map((item) => item?.english_name || "")}
+        />
       </nav>
 
       {/* RIGHT */}
