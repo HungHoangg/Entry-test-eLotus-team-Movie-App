@@ -1,0 +1,149 @@
+.movie-detail {
+  position: relative;
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, transparent);
+    padding: 6rem 4rem 3rem;
+  }
+
+  &__overview {
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__poster {
+    flex-shrink: 0;
+
+    img {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .original-title {
+      font-size: 1.1rem;
+      color: #f5c518;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &.watch-btn {
+          background: #f5c518;
+          color: #000;
+          font-weight: 600;
+
+          &:hover {
+            background: #ffde47;
+          }
+        }
+
+        &.like-btn {
+          background: rgba(255, 255, 255, 0.15);
+          color: #fff;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  &__overview {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 1.5rem;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  &__detail-info {
+    > *:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__detail-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.movie-detail__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(8px) brightness(0.4);
+  transform: scale(1.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  transition: opacity 0.6s ease;
+
+  &.has-backdrop {
+    opacity: 1;
+  }
+
+  &[data-bg] {
+    background-image: attr(data-bg url);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.9));
+  }
+}

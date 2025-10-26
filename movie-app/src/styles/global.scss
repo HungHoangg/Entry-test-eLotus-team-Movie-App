@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  opacity: 0;
+  transform: scale(1.02); 
+  filter: blur(6px) brightness(0.9);
+  transition:
+    opacity 1s ease-in-out,
+    transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+    filter 1.2s ease;
+}
+
+img.loaded {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0) brightness(1);
+}

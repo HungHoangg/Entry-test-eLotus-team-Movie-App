@@ -1,5 +1,3 @@
-# Entry-test-eLotus-team-Movie-App
-Entry test eLotus team: Movie App
 # 🎬 A Movies App
 
 A React + TypeScript + Vite application that displays a web movies fetched from the TMDB API.  

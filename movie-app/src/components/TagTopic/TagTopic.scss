@@ -1,0 +1,29 @@
+.tag-topic {
+    background-color: #ffffff10;
+    height: 26px;
+    padding: 0 0.4rem;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    &--imdb {
+      border: 1px solid #ffde47;
+      span {
+        color: #ffde47;
+      }
+    }
+
+    &--adult {
+      background-color: white;
+      color: #000;
+    }
+
+    &--basic-tag {
+      border: 1px solid white;
+      color: white;
+    }
+  }

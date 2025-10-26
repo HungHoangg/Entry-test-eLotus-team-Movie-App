@@ -1,0 +1,20 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #191b24;
+  overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1;
+  color: #fff;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+  color: #aaa;
+  font-size: 14px;
+}

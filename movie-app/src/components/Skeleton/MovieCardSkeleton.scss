@@ -1,0 +1,54 @@
+.movie-card.skeleton {
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.poster-skeleton {
+  flex: 1;
+  background-color: #2a2a3b;
+  border-radius: 8px 8px 0 0;
+  max-width: 222px;
+  max-height: 333px;
+  width: 100%;
+  height: 100%;
+}
+
+.info-skeleton {
+  padding: 0.75rem 0.5rem;
+
+  .title-skeleton,
+  .subtitle-skeleton {
+    height: 14px;
+    border-radius: 4px;
+    margin: 6px auto;
+  }
+
+  .title-skeleton {
+    width: 70%;
+  }
+
+  .subtitle-skeleton {
+    width: 50%;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(100deg, #2a2a3b 20%, #3b3b4d 40%, #2a2a3b 60%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -150% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}

@@ -1,0 +1,18 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #191b24;
+  overflow-x: hidden;
+  padding: 80px 40px 40px 40px;
+}
+
+.filter {
+  margin-bottom: 2rem;
+  span {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }:hover {
+    color: #f2f2f2;
+  }
+}
