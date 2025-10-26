@@ -9,7 +9,7 @@ A React + TypeScript + Vite application that displays a web movies fetched from 
 
 - **Name:** Nguyen Hoang Hung
 - **Email:** cuoicuoi1702@gmail.com
-- **GitHub Repository:** [Link to your repo]
+- **GitHub Repository:** https://github.com/HungHoangg/Entry-test-eLotus-team-Movie-App/
 - **Submission Date:** 26/10/2025
 
 ---
